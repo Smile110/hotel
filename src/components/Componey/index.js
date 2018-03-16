@@ -4,7 +4,7 @@
 import React from 'react';
 import style from './style.css'
 export class Componey extends React.Component {
-    render(){
+    render() {
         let style = {color: '#4AB6FF'};
         return (
             <div className="componeyRoot">
