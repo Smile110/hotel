@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Nomolize from './static/css/nomalize.css';
 import './App.css';
 
+import Nav from './components/Nav/index';
 import Home from './components/Home';
 import School from './components/School';
 import { Componey } from './components/Componey/index';
@@ -11,6 +13,7 @@ class App extends Component {
     return (
       <BrowserRouter>
           <div>
+              <Nav></Nav>
               {/* 定路由 */}
               <a href="/">首页</a>&nbsp;
               <p></p>

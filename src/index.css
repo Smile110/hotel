@@ -3,3 +3,27 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+body, #tstart h1, #tstart h2, #tstart h3, #tstart h4, #tstart h5, #tstart h6, #tstart hr, #tstart p, #tstart dl, #tstart dt, #tstart dd, #tstart ul, #tstart ol, #tstart li, #tstart pre, #tstart form, #tstart fieldset, #tstart legend, #tstart button, #tstart input, #tstart th, #tstart td {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 清除浮动 */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
