@@ -3,17 +3,27 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Nomolize from './static/css/nomalize.css';
 import './App.css';
 
-import Nav from './components/Nav/index';
+import Comment from './components/Nav/index';
 import Home from './components/Home';
 import School from './components/School';
 import { Componey } from './components/Componey/index';
+
+const comment = {
+    author: {
+        imgUrl: 'http://img.jointwisdom.cn/images/index/huiping-active.png',
+        describe: '测试组件',
+        name: '测试名称'
+    },
+    text: 'texttexttexttexttexttext',
+    // date: new Date()
+};
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
           <div>
-              <Nav></Nav>
+              <Comment author={comment.author} text={comment.text}></Comment>
               {/* 定路由 */}
               <a href="/">首页</a>&nbsp;
               <p></p>

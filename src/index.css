@@ -27,3 +27,23 @@ body, #tstart h1, #tstart h2, #tstart h3, #tstart h4, #tstart h5, #tstart h6, #t
 .clearfix:after {
   clear: both;
 }
+
+ul li {
+  list-style: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.untext-underline {
+  text-decoration: none;
+}

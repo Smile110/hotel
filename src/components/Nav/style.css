@@ -16,6 +16,7 @@ nav {
 }
 
 .App-header ul li {
-    width: 200px;
+    width: 150px;
     float: left;
+    line-height: 32px;
 }

@@ -11,16 +11,44 @@ export default class Nav extends React.Component {
         return(
             <nav className="App-header">
                 <div className="App-logo">
-                    <a href="/"><img src={logoUrl} alt="众荟" title="首页"/></a>
+                    <a href="/"><img src={logoUrl} alt={this.props.name} title={this.props.name}/></a>
                 </div>
-                <ul className="clearfix">
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/">首页</a></li>
-                    <li><a href="/">首页</a></li>
+                <ul className="clearfix text-center ">
+                    <li><a className="untext-underline" href="/">Home</a></li>
+                    <li><a className="untext-underline" href="/school">School</a></li>
+                    <li><a className="untext-underline" href="/componey">Componey</a></li>
                 </ul>
             </nav>
         )
     }
 }
+
+
+/*
+function Comment(props) {
+    return (
+        <div className="Comment">
+            <UserInfo author={props.author}/>
+            <div className="Comment-text">
+                {props.text}
+            </div>
+            <div className="Comment-date">
+                {props.date}
+            </div>
+        </div>
+    )
+}
+
+// 分别抽取
+function UserInfo(props) {
+    return(
+        <div className="userInfo">
+            <img src={props.author.imgUrl} alt={props.author.describe} title={props.author.describe} />
+            <div className="UserInfo-name">
+                {props.name}
+            </div>
+        </div>
+    )
+}
+
+export default Comment*/
