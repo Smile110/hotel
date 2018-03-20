@@ -9,7 +9,7 @@ export default class Toggle extends Component {
         this.state = {
             isToggleOn: true,
         };
-        // this.handleClick = this.handleClick.bind(this);
+        // 这个绑定是必要的，使`this`在回调中起作用
         this.handleClick = this.handleClick.bind(this)
     }
 
@@ -21,7 +21,7 @@ export default class Toggle extends Component {
 
     render(){
         return (
-            <button onClick={this.handleClick} className={this.state.isToggleOn ? 'btn btn-primary' : 'btn'}>
+            <button onClick={this.handleClick} className={this.state.isToggleOn ? "btn btn-primary" : "btn"}>
                 {this.state.isToggleOn ? '开' : "关"}
             </button>
         )

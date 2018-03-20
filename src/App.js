@@ -10,11 +10,6 @@ import { Componey } from './components/Componey/index';
 import Toggle from "./components/Toggle";
 
 class App extends Component {
-
-    clickEvent(){
-        alert('点击事件');
-    }
-
   render() {
     return (
       <BrowserRouter>
@@ -35,6 +30,7 @@ class App extends Component {
               <Route path="/home" component={Home} />
               <Route path="/school" component={School} />
               <Route path="/componey" component={Componey} />
+              <br/>
               <br/>
               <Toggle />
           </div>
