@@ -7,8 +7,8 @@ import Nav from './components/Nav/index';
 import Home from './components/Home';
 import School from './components/School';
 import { Componey } from './components/Componey/index';
-import Toggle from "./components/Toggle";
-
+// import Toggle from "./components/Login/Toggle";
+import LoginControl from './components/Login/LoginControl';
 class App extends Component {
   render() {
     return (
@@ -32,7 +32,7 @@ class App extends Component {
               <Route path="/componey" component={Componey} />
               <br/>
               <br/>
-              <Toggle />
+              <LoginControl />
           </div>
       </BrowserRouter>
     )
