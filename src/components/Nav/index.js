@@ -22,33 +22,3 @@ export default class Nav extends React.Component {
         )
     }
 }
-
-
-/*
-function Comment(props) {
-    return (
-        <div className="Comment">
-            <UserInfo author={props.author}/>
-            <div className="Comment-text">
-                {props.text}
-            </div>
-            <div className="Comment-date">
-                {props.date}
-            </div>
-        </div>
-    )
-}
-
-// 分别抽取
-function UserInfo(props) {
-    return(
-        <div className="userInfo">
-            <img src={props.author.imgUrl} alt={props.author.describe} title={props.author.describe} />
-            <div className="UserInfo-name">
-                {props.name}
-            </div>
-        </div>
-    )
-}
-
-export default Comment*/

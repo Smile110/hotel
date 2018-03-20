@@ -47,3 +47,13 @@ ul li {
 .untext-underline {
   text-decoration: none;
 }
+
+.btn {
+  border: none;
+  padding: 5px 20px;
+}
+
+.btn-primary {
+  background: #18a9ee;
+  color: #fff;
+}
