@@ -9,6 +9,8 @@ import School from './components/School';
 import { Componey } from './components/Componey/index';
 // import Toggle from "./components/Login/Toggle";
 import LoginControl from './components/Login/LoginControl';
+import Form from './components/Login/Form';
+
 class App extends Component {
   render() {
     return (
@@ -24,12 +26,13 @@ class App extends Component {
               <p></p>
               <Link to="home">Home</Link>&nbsp;
               <Link to="school">School</Link>&nbsp;
-              <Link to="/componey">Componey</Link>
+              <Link to="componey">Componey</Link>
               <p></p>
                实现路由
               <Route path="/home" component={Home} />
               <Route path="/school" component={School} />
               <Route path="/componey" component={Componey} />
+              <Route path="/login" component={Form} />
               <br/>
               <br/>
               <LoginControl />

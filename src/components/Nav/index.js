@@ -17,6 +17,7 @@ export default class Nav extends React.Component {
                     <li><a className="untext-underline" href="/">Home</a></li>
                     <li><a className="untext-underline" href="/school">School</a></li>
                     <li><a className="untext-underline" href="/componey">Componey</a></li>
+                    <li><a className="untext-underline" href="/login">表单</a></li>
                 </ul>
             </nav>
         )
