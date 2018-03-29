@@ -9,26 +9,31 @@ export default class LoginForm extends Component {
         // 初始化state
         this.state= {
             name: '',
-            age: ''
+            age: '',
+            // checkItem: true
         };
 
-        this.handleChangeName = this.handleChangeName.bind(this);
-        this.handleChangeAge = this.handleChangeAge.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        // this.handleChangeAge = this.handleChangeAge.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChangeName(event){
+    handleChange(event){
+        const target = event.target;
+        // const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
         this.setState({
-            name: event.target.value
+            [name]: target.value
         })
     }
-    handleChangeAge(event){
+    /*handleChangeAge(event){
         this.setState({
             age: event.target.value
         })
-    }
+    }*/
 
     handleSubmit(event){
+        console.log(this.state);
         console.log(this.state.name, this.state.age);
         // 阻止默认事件
         event.preventDefault();
@@ -40,10 +45,13 @@ export default class LoginForm extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <ul>
                         <li>
-                            <label htmlFor="name">姓名：<input type="text" value={this.state.name} onChange={this.handleChangeName}/></label>
+                            <label htmlFor="name">姓名：<input type="text" name="name" value={this.state.name} onChange={this.handleChange}/></label>
                         </li>
+                        {/*<li>*/}
+                            {/*<label htmlFor="check"><input onChange={this.handleChange} type="checkbox" name="checkItem"  checked={this.state.checkItem} /></label>*/}
+                        {/*</li>*/}
                         <li>
-                            <label htmlFor="age">年龄：<input type="text" value={this.state.age} onChange={this.handleChangeAge}/></label>
+                            <label htmlFor="age">年龄：<input type="text" name="age" value={this.state.age} onChange={this.handleChange}/></label>
                         </li>
                         <li>
                             <button type="submit">提交</button>
