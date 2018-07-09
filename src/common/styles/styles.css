@@ -239,4 +239,14 @@ footer {
     color: #f3323d;
 }
 
+.copy-right {
+    border-top: 1px solid #55514e
+}
+
+.copy-right-info {
+    line-height: 40px;
+    font-size: 12px;
+    color: #bbb;
+}
+
 /********************* end footer *********************/
