@@ -1,44 +1,48 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Nomolize from './static/css/nomalize.css';
-import './App.css';
-
 import Nav from './components/Nav/index';
-import Home from './components/Home';
-import School from './components/School';
-import { Componey } from './components/Componey/index';
-// import Toggle from "./components/Login/Toggle";
+import Footer from './components/Footer';
+import Hotel from './components/Hotel';
+import Exhibition from './components/Exhibition';
+import Promotion from './components/Promotion';
+import Jintaihui from './components/Jintaihui';
+import About from './components/About';
 import LoginControl from './components/Login/LoginControl';
-import Form from './components/Login/Form';
+import Register from './components/Register';
+
+// 样式
+import './common/styles/nomalize.css';
+import './common/styles/styles.css';
+import './common/styles/margins.css';
 
 class App extends Component {
   render() {
+      const minHeight = {
+          minHeight: '300px'
+      };
     return (
       <BrowserRouter>
           <div>
-              <Nav></Nav>
-               定路由
-              <a href="/">首页</a>&nbsp;
-              <p></p>
-              <a href="/home">Home</a>&nbsp;
-              <a href="/school">School</a>&nbsp;
-              <a href="/componey">Componey</a>
-              <p></p>
-              <Link to="home">Home</Link>&nbsp;
-              <Link to="school">School</Link>&nbsp;
-              <Link to="componey">Componey</Link>
-              <p></p>
-               实现路由
-              <Route path="/home" component={Home} />
-              <Route path="/school" component={School} />
-              <Route path="/componey" component={Componey} />
-              <Route path="/login" component={Form} />
-              <br/>
-              <br/>
-              <LoginControl />
+              <Nav />
+
+              {/* 路由部分 */}
+              <Route path="/" />
+              <Route path="/hotel" component={Hotel} />
+              <Route path="/exhibition" component={Exhibition} />
+              <Route path="/promotion" component={Promotion} />
+              <Route path="/jintaihui" component={Jintaihui} />
+              <Route path="/about" component={About} />
+              <Route path="/login" component={LoginControl} />
+              <Route path="/register" component={Register} />
+              {/* end 路由部分 */}
+
+              <div style={minHeight}>
+                  <h1>占位</h1>
+              </div>
+              <Footer/>
           </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 
