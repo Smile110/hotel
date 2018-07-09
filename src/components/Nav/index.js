@@ -1,25 +1,36 @@
 /**
  * Created by SmileYang on 2018/3/16.
  */
-import React from 'react';
-import style from './style.css';
+import React, {Component} from 'react';
+import logoUrl from '../../common/images/jw-logo.png';
 
-import logoUrl from '../../static/img/jw-logo.png';
-
-export default class Nav extends React.Component {
+export default class Nav extends Component {
     render(){
-        return(
-            <nav className="App-header">
-                <div className="App-logo">
-                    <a href="/"><img src={logoUrl} alt={this.props.name} title={this.props.name}/></a>
-                </div>
-                <ul className="clearfix text-center ">
-                    <li><a className="untext-underline" href="/">Home</a></li>
-                    <li><a className="untext-underline" href="/school">School</a></li>
-                    <li><a className="untext-underline" href="/componey">Componey</a></li>
-                    <li><a className="untext-underline" href="/login">表单</a></li>
-                </ul>
-            </nav>
+        return (
+            <header>
+                <nav className="main clearfix">
+                    <div className="nav-logo pull-left">
+                        <img src={logoUrl} alt="" />
+                    </div>
+                    <div className="nav-container">
+                        <ul className="nav-list clearfix">
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/hotel">酒店预定</a></li>
+                            <li><a href="/exhibition">商旅会展</a></li>
+                            <li><a href="/promotion">优惠促销</a></li>
+                            <li><a href="/jintaihui">金泰会</a></li>
+                            <li><a href="/about">关于我们</a></li>
+                        </ul>
+                    </div>
+                    <div className="pull-right login-model">
+                        <ul className="clearfix">
+                            <li className="pull-left mr-10"><a className="btn btn-sm btn-primary" href="/login">登录</a></li>
+                            <li className="pull-left"><a className="btn btn-sm btn-line" href="/register">注册</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
         )
-    }
+    };
 }
+

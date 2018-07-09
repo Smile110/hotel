@@ -47,11 +47,12 @@ export default class LoginForm extends Component {
                         <li>
                             <label htmlFor="name">姓名：<input type="text" name="name" value={this.state.name} onChange={this.handleChange}/></label>
                         </li>
-                        {/*<li>*/}
-                            {/*<label htmlFor="check"><input onChange={this.handleChange} type="checkbox" name="checkItem"  checked={this.state.checkItem} /></label>*/}
-                        {/*</li>*/}
+                        {/*<li>
+                            <label htmlFor="check"><input onChange={this.handleChange} type="checkbox" name="checkItem"  checked={this.state.checkItem} /></label>
+                        </li>*/}
                         <li>
                             <label htmlFor="age">年龄：<input type="text" name="age" value={this.state.age} onChange={this.handleChange}/></label>
+                            <span>{this.state.age}</span>
                         </li>
                         <li>
                             <button type="submit">提交</button>
