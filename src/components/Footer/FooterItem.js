@@ -11,7 +11,7 @@ export default class FooterItem extends Component {
     render() {
         const linkItems = this.props.links;
         const items = linkItems.linkItem.map((item, index) => {
-            return <dd key={index}><a href={item.link}>{item.title}</a></dd>
+            return <dd key={index}><a target={item.openWay || '_self'} href={item.link}>{item.title}</a></dd>
         });
         return (
             <dl>
