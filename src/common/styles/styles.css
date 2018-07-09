@@ -42,7 +42,6 @@ a {
     text-align: center;
 }
 
-
 /**
  * For IE 6/7 only
  */
@@ -69,7 +68,7 @@ a {
     border: 1px solid transparent;
     border-radius: 3px;
     transition: all .3s;
-    outline:none;
+    outline: none;
 }
 
 /* 按钮样式 */
@@ -189,3 +188,55 @@ header {
 }
 
 /********************* end 导航 *********************/
+
+/********************* footer *********************/
+footer {
+    background: #28282b;
+    padding-top: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: calc(100% - 160px);
+}
+
+.footer-container dl {
+    float: left;
+    width: 33.33333333%;
+}
+
+.footer-container dl dt {
+    color: #f3323d;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.footer-container dl dt:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 14px;
+    left: 0;
+    top: 3px;
+    background-color: #f3323d;
+}
+
+.footer-container dl dd {
+    margin-bottom: 10px;
+}
+
+
+.footer-container dl dd > a {
+    color: #fffefe;
+    transition: color .3s;
+    font-size: 16px;
+}
+
+.footer-container dl dd > a:hover {
+    color: #f3323d;
+}
+
+/********************* end footer *********************/

@@ -13,7 +13,7 @@ import Register from './components/Register';
 // 样式
 import './common/styles/nomalize.css';
 import './common/styles/styles.css';
-import './common/styles/margins.css';
+import './common/styles/margins-paddings.css';
 
 class App extends Component {
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <BrowserRouter>
           <div>
-              <Nav />
+              <Nav  />
 
               {/* 路由部分 */}
               <Route path="/" />
