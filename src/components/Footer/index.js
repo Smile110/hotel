@@ -1,39 +1,43 @@
 /**
  * Created by SmileYang on 2018/7/9.
  */
-import React, { Component } from 'react';
-import code from '../../common/images/code.png'
+import React, {Component} from 'react';
+import FooterItem from './FooterItem';
+import code from '../../common/images/code.png';
 
-export default class Footer extends Component  {
-    constructor(props){
+export default class Footer extends Component {
+    constructor(props) {
         super(props)
     }
-    render(){
-        return(
+
+    render() {
+        let aboutFooterLinks = {
+            linkTitle: '关于我们',
+            linkItem: [
+                {title: '集团介绍', link: 'https://github.com/'},
+                {title: '企业文化', link: 'https://www.baidu.com/'},
+            ]
+        };
+        let joinFooterLinks = {
+            linkTitle: '加盟合作',
+            linkItem: [
+                {title: '酒店', link: 'https://github.com/'},
+                {title: '住宿', link: 'https://www.baidu.com/'},
+            ]
+        };
+        let telFooterLinks = {
+            linkTitle: '客服电话',
+            linkItem: [
+                {title: '电话'},
+            ]
+        };
+        return (
             <footer className="footer">
                 <div className="main clearfix pd-30">
                     <div className="footer-container pull-left">
-                        <dl>
-                            <dt className="pl-8">
-                                关于我们
-                            </dt>
-                            <dd><a href="/about#groupIntro">集团介绍</a></dd>
-                            <dd><a href="/about#groupCulture">企业文化</a></dd>
-                            <dd><a href="/about#job">招贤纳士</a></dd>
-                        </dl>
-                        <dl>
-                            <dt className="pl-8">
-                                加盟合作
-                            </dt>
-                            <dd><a target="_blank" href="https://www.baidu.com/">火锅店</a></dd>
-                            <dd><a target="_blank" href="https://github.com/">酒店</a></dd>
-                        </dl>
-                        <dl>
-                            <dt className="pl-8">
-                                客服电话
-                            </dt>
-                            <dd><a>12345678</a></dd>
-                        </dl>
+                        <FooterItem links={aboutFooterLinks}/>
+                        <FooterItem links={joinFooterLinks}/>
+                        <FooterItem links={telFooterLinks}/>
                     </div>
                     <div className="pull-right">
                         <img src={code} alt=""/>
@@ -41,7 +45,8 @@ export default class Footer extends Component  {
                 </div>
                 <div className="copy-right">
                     <div className="main">
-                        <p className="copy-right-info text-center">粤ICP备案14062877号  |  版权所有©2014 Homeinns Co.,Ltd All Rights Reserved.</p>
+                        <p className="copy-right-info text-center">粤ICP备案14062877号 | 版权所有©2014 Homeinns Co.,Ltd All
+                            Rights Reserved.</p>
                     </div>
                 </div>
             </footer>
