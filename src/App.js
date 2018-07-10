@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Nav from './components/Nav/index';
 import Footer from './components/Footer';
 import Hotel from './components/Hotel';
@@ -9,6 +9,7 @@ import Jintaihui from './components/Jintaihui';
 import About from './components/About';
 import LoginControl from './components/Login/LoginControl';
 import Register from './components/Register';
+import Home from './components/Home';
 
 // 样式
 import './common/styles/nomalize.css';
@@ -26,7 +27,7 @@ class App extends Component {
               <Nav  />
 
               {/* 路由部分 */}
-              <Route path="/" />
+              <Route exact path="/" component={Home} />
               <Route path="/hotel" component={Hotel} />
               <Route path="/exhibition" component={Exhibition} />
               <Route path="/promotion" component={Promotion} />

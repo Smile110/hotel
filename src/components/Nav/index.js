@@ -2,7 +2,17 @@
  * Created by SmileYang on 2018/3/16.
  */
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 import logoUrl from '../../common/images/jw-logo.png';
+
+const navs = [
+    { label: '首页', href: '/', props: {exact: true} },
+    { label: '酒店预定', href: '/hotel' },
+    { label: '商旅会展', href: '/exhibition' },
+    { label: '优惠促销', href: '/promotion' },
+    { label: '金泰会', href: '/jintaihui' },
+    { label: '关于我们', href: '/about' },
+];
 
 export default class Nav extends Component {
     render(){
@@ -14,12 +24,13 @@ export default class Nav extends Component {
                     </div>
                     <div className="nav-container">
                         <ul className="nav-list clearfix">
-                            <li><a href="/">首页</a></li>
-                            <li><a href="/hotel">酒店预定</a></li>
-                            <li><a href="/exhibition">商旅会展</a></li>
-                            <li><a href="/promotion">优惠促销</a></li>
-                            <li><a href="/jintaihui">金泰会</a></li>
-                            <li><a href="/about">关于我们</a></li>
+                            {
+                                navs.map((nav, index) =>
+                                    <li key={index}>
+                                        <NavLink to={nav.href} activeClassName="active" {...nav.props}>{nav.label}</NavLink>
+                                    </li>
+                                )
+                            }
                         </ul>
                     </div>
                     <div className="pull-right login-model">

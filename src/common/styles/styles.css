@@ -176,6 +176,7 @@ header {
     border-bottom: solid #fff 2px;
 }
 
+.nav-list li > a.active,
 .nav-list li > a:hover {
     color: #f3323d;
     border-bottom: solid #f3323d 2px;
