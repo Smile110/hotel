@@ -11,7 +11,7 @@ import LoginControl from './components/Login/LoginControl';
 import Register from './components/Register';
 import Home from './components/Home';
 
-// 样式
+// 样式文件引入
 import './common/styles/nomalize.css';
 import './common/styles/styles.css';
 import './common/styles/margins-paddings.css';
