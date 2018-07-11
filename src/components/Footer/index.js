@@ -9,10 +9,6 @@ import code from '../../common/images/code.png';
 const footers = constantsObj.footers;
 
 export default class Footer extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     getFootersComponents() {
         return footers.map((footer, index) => <FooterItem links={footer} key={index}/>);
     }

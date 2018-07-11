@@ -4,10 +4,6 @@
 import React, {Component} from 'react';
 
 export default class FooterItem extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const linkItems = this.props.links;
         const items = linkItems.linkItem.map((item, index) => {
