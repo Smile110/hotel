@@ -26,8 +26,7 @@ export default class Footer extends Component {
                 </div>
                 <div className="copy-right">
                     <div className="main">
-                        <p className="copy-right-info text-center">粤ICP备案14062877号 | 版权所有©2014 Homeinns Co.,Ltd All
-                            Rights Reserved.</p>
+                        <p className="copy-right-info text-center">{constantsObj.footerCopyRight}</p>
                     </div>
                 </div>
             </footer>

@@ -34,5 +34,6 @@ export default {
                 {title: '电话'},
             ]
         }
-    ]
+    ],
+    footerCopyRight: '众荟信息众荟信息众荟信息众荟信息众荟信息众荟信息众荟信息'
 }
