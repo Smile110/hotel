@@ -3,31 +3,10 @@
  */
 import React, {Component} from 'react';
 import FooterItem from './FooterItem';
+import constantsObj from '../../common/constants';
 import code from '../../common/images/code.png';
 
-const footers = [
-    {
-        linkTitle: '关于我们',
-        linkItem: [
-            {title: '集团介绍', link: '/about#introduce', openWay: '_self'},
-            {title: '企业文化', link: '/about#culture', openWay: '_self'},
-            {title: '招贤纳士', link: '/about#job'},
-        ]
-    },
-    {
-        linkTitle: '加盟合作',
-        linkItem: [
-            {title: '酒店', link: 'https://github.com/', openWay: '_blank'},
-            {title: '住宿', link: 'https://www.baidu.com/', openWay: '_blank'},
-        ]
-    },
-    {
-        linkTitle: '客服电话',
-        linkItem: [
-            {title: '电话'},
-        ]
-    }
-];
+const footers = constantsObj.footers;
 
 export default class Footer extends Component {
     constructor(props) {

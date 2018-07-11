@@ -3,16 +3,10 @@
  */
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
+import constantsObj from '../../common/constants';
 import logoUrl from '../../common/images/jw-logo.png';
 
-const navs = [
-    { label: '首页', href: '/', props: {exact: true} },
-    { label: '酒店预定', href: '/hotel' },
-    { label: '商旅会展', href: '/exhibition' },
-    { label: '优惠促销', href: '/promotion' },
-    { label: '金泰会', href: '/jintaihui' },
-    { label: '关于我们', href: '/about' },
-];
+const navs = constantsObj.navs;
 
 export default class Nav extends Component {
     render(){
